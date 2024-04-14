@@ -1,2 +1,3 @@
 ﻿author = Dark-Assassin
 displayName = Segmented Enemy Changes
+version = 1.0.1

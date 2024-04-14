@@ -72,9 +72,7 @@ namespace SegmentedEnemyChanges {
 					if (projectile != null) {
 						projectile.localNPCImmunity[parent.whoAmI] = projectile.localNPCImmunity[npc.whoAmI]; // Share projectile immunity
 					}
-					else {
-						parent.immune[player.whoAmI] = npc.immune[player.whoAmI]; // Share melee immunity
-					}
+					parent.immune[player.whoAmI] = npc.immune[player.whoAmI]; // Share melee immunity
 					for (int j=0; j < npc.buffType.Length; j++) { // Share the debuffs between all segments
 						if (npc.buffType[j] > 0 && npc.buffTime[j] > 0) {
 							parent.buffType[j] = npc.buffType[j];
