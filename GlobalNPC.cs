@@ -34,7 +34,7 @@ namespace SegmentedEnemyChanges {
 			return base.PreAI(npc);
 		}
 
-		public override void OnHitByItem (NPC npc, Player player, Item item, int damage, float knockback, bool crit) {
+		public override void OnHitByItem (NPC npc, Player player, Item item, NPC.HitInfo hit, int damageDone) {
 			npc.immune[player.whoAmI] = player.itemAnimation;
 			MakeSegmentsImmune(npc, player);
 		}
@@ -46,7 +46,7 @@ namespace SegmentedEnemyChanges {
 			return null;
 		}
 
-		public override void OnHitByProjectile (NPC npc, Projectile projectile, int damage, float knockback, bool crit) {
+		public override void OnHitByProjectile (NPC npc, Projectile projectile, NPC.HitInfo hit, int damageDone) {
 			if (IsSegmented(npc)) {
 				projectile.usesLocalNPCImmunity = true;
 				// TODO: Make immunity depend on how far the projectile travels rather than a fixed time. Really fast projectiles are screwed here. Also reset immunity if projectile doesn't collide at all.
