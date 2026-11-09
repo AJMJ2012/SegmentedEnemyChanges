@@ -1,0 +1,3 @@
+Changes how segmented enemies receive damage.
+Now every segment shares buffs, debuffs, and damage immunity.
+This will buff them overall by making piercing projectiles less effective.
